@@ -1,50 +1,18 @@
-### Running the project:
+# YaTube API
 
-Cloning the repository and accessing it through terminal:
+A Django REST Framework API for posts, groups, comments and follows, with JWT authentication.
 
-```
-git clone https://github.com/selectcoma/api_final_yatube.git
-```
+## Run locally
 
-```
-cd api_final_yatube.git
-```
+From the repository root:
 
-Create and activate the virtual environment:
-
-```
-python3 -m venv env
-```
-
-```
-source env/bin/activate
-```
-
-```
-python3 -m pip install --upgrade pip
-```
-
-Install the requirements from requirements.txt:
-
-```
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
+cd yatube_api
+python manage.py migrate
+python manage.py runserver
 ```
 
-Migrations:
-
-```
-python3 manage.py migrate
-```
-
-Launch the project:
-
-```
-python3 manage.py runserver
-```
-
-Access the documentation:
-
-```
-project_url + /redoc
-```
-
+API: http://127.0.0.1:8000/api/v1/. Documentation: http://127.0.0.1:8000/redoc/.
